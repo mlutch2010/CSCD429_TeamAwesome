@@ -16,8 +16,14 @@ public class User
    this.gender = 0;
    this.age = 0;
    }
+   public User(int userID, int gender, int age)
+   {
+	   this.userID = userID;
+	   this.gender = gender;
+	   this.age = age;
+   }
    
-   public User(click, impression, userID, userProfile, gender, age)
+   public User(int click,int impression,int userID,int userProfile,int gender,int age)
    {
      this.click = click;
      this.userID = userID;
@@ -26,7 +32,7 @@ public class User
      this.age = age;
    }
    
-   public void setAll(click, impression, userID, userProfile, gender, age)
+   public void setAll(int click,int impression,int userID,int userProfile,int gender,int age)
    {
      this.click = click;
      this.userID = userID;
@@ -35,32 +41,42 @@ public class User
      this.age = age;
    }
    
-   public void setClick(click)
+   @Override
+   public String toString()
+   {
+	String st = this.click + " " + this.impression + " " + this.userID;
+	return st;
+	   
+   }
+   
+   
+   
+   public void setClick(int click)
    {
       this.click = click;
    }
    
-   public void setImpression(impression)
+   public void setImpression(int impression)
    {
       this.impression = impression;
    }
    
-   public void setUserID(userID)
+   public void setUserID(int userID)
    {
       this.userID = userID;
    }
    
-   public void setUserProfile(userProf)
+   public void setUserProfile(int userProf)
    {
       this.userProfile = userProf;  
    }
    
-   public void setGender(gender)
+   public void setGender(int gender)
    {
       this.gender = gender;
    }
    
-   public void setAge(age)
+   public void setAge(int age)
    {
       this.age = age;
    }

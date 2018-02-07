@@ -15,35 +15,37 @@ public class DataMiningProject {
 	
 	public static void infoReader(File sampleFile, File userProfileFile) throws IOException//change to return User[]
 	{
+		Data data = new Data();
+		User cur;
 		String st;
-		int click,impression,userId,gender,age;
+		int click,impression,userId;
+		ArrayList<User>  userInfo = new ArrayList<User>(50); //actual size is 23907634
 		String[] info,userProfile;
-		String[][] userInfo = new String[50][3];
-		int x = 0;
 		BufferedReader sampleReader = new BufferedReader(new FileReader(sampleFile));
 		BufferedReader userReader = new BufferedReader(new FileReader(userProfileFile));
 		
 		while ((st = userReader.readLine()) != null)
 		{
-			userInfo[x] = st.split("\t");
-			x++;
+			userProfile = st.split("\t");
+			userInfo.add(new User(Integer.parseInt(userProfile[0]),Integer.parseInt(userProfile[1]),Integer.parseInt(userProfile[2])));
 		}
 		
-		while ((st = sampleReader.readLine()) != null)
+		while ((st = sampleReader.readLine()) != null)//actual number of lines is 149,639,106
 		{
 		    info = st.split("\t");
 		    click = Integer.parseInt(info[0]);
 		    impression = Integer.parseInt(info[1]);
 		    userId = Integer.parseInt(info[11]);
-		    userProfile = userInfo[userId-1];
-		    gender = Integer.parseInt(userProfile[1]);
-		    age = Integer.parseInt(userProfile[2]);
-		    //turn info into User
-		    //add to User[]
+		    cur = userInfo.get(userId-1);
+		    cur.setClick(click);
+		    cur.setImpression(impression);
+		    System.out.println(userInfo.get(userId-1).toString());
+		    data.addDate(cur.getGender(), cur.getAge(), click, impression);
+
 		}
 		//return User[]
 		
-		  
+		  data.printToFile();
 		  sampleReader.close();
 		  userReader.close();
 	}
