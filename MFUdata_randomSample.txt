@@ -1,0 +1,20 @@
+Male, age(0-12): 110 clicks 2632 impressions
+Male, age(13-18): 252 clicks 5793 impressions
+Male, age(19-24): 413 clicks 10564 impressions
+Male, age(22-30): 265 clicks 7235 impressions
+Male, age(31-40): 203 clicks 4977 impressions
+Male, age(41+): 124 clicks 2325 impressions
+
+Female, age(0-12): 85 clicks 1894 impressions
+Female, age(13-18): 171 clicks 3720 impressions
+Female, age(19-24): 374 clicks 8776 impressions
+Female, age(22-30): 281 clicks 5910 impressions
+Female, age(31-40): 220 clicks 4041 impressions
+Female, age(41+): 86 clicks 1626 impressions
+
+Unknown, age(0-12): 24 clicks 687 impressions
+Unknown, age(13-18): 3 clicks 60 impressions
+Unknown, age(19-24): 5 clicks 60 impressions
+Unknown, age(22-30): 1 clicks 34 impressions
+Unknown, age(31-40): 1 clicks 36 impressions
+Unknown, age(41+): 1 clicks 18 impressions
