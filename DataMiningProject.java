@@ -6,8 +6,8 @@ public class DataMiningProject {
 	public static void main(String[] args) throws IOException
 	{
 
-		File sampleFile = new File("50Samples.txt");
-		File userProfileFile = new File("50userid.txt");
+		File sampleFile = new File("randomSample.txt");
+		File userProfileFile = new File("userid_profile.txt");
 		infoReader(sampleFile,userProfileFile); 
 		
 
@@ -18,8 +18,8 @@ public class DataMiningProject {
 		Data data = new Data();
 		User cur;
 		String st;
-		int click,impression,userId;
-		ArrayList<User>  userInfo = new ArrayList<User>(50); //actual size is 23907634
+		int click,impression,userId,x = 0 ;
+		ArrayList<User>  userInfo = new ArrayList<User>(23907634); //actual size is 23907634
 		String[] info,userProfile;
 		BufferedReader sampleReader = new BufferedReader(new FileReader(sampleFile));
 		BufferedReader userReader = new BufferedReader(new FileReader(userProfileFile));
@@ -27,7 +27,12 @@ public class DataMiningProject {
 		while ((st = userReader.readLine()) != null)
 		{
 			userProfile = st.split("\t");
-			userInfo.add(new User(Integer.parseInt(userProfile[0]),Integer.parseInt(userProfile[1]),Integer.parseInt(userProfile[2])));
+			while(x != Integer.parseInt(userProfile[0])-1)
+			{
+				userInfo.add(x, null);
+			}
+			userInfo.add(Integer.parseInt(userProfile[0])-1, new User(Integer.parseInt(userProfile[0]),Integer.parseInt(userProfile[1]),Integer.parseInt(userProfile[2])));
+			x++;
 		}
 		
 		while ((st = sampleReader.readLine()) != null)//actual number of lines is 149,639,106
