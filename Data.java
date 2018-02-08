@@ -7,17 +7,21 @@ public class Data {
 	int[] m1 = new int[2];int[] m2 = new int[2];int[] m3 = new int[2];int[] m4 = new int[2];int[] m5 = new int[2];int[] m6 = new int[2];
 	int[] f1 = new int[2];int[] f2 = new int[2];int[] f3 = new int[2];int[] f4 = new int[2];int[] f5 = new int[2];int[] f6 = new int[2];
 	int[] u1 = new int[2];int[] u2 = new int[2];int[] u3 = new int[2];int[] u4 = new int[2];int[] u5 = new int[2];int[] u6 = new int[2];
+	int[] no = new int[2];
 
 	
 	public Data()
 	{
 		
 	}
-
-	public void addDate(int gender, int age, int clicks, int impressions)
-
+	public void addData(int clicks, int impressions)
+	{
+		no[0] += clicks;
+		no[1] += impressions;
+	}
 	
-	
+
+	public void addData(int gender, int age, int clicks, int impressions)
 	{
 		if(gender == 1)
 		{
@@ -89,7 +93,7 @@ public class Data {
 			
 		}//end gender == 2
 		
-		if(gender == 3)
+		if(gender == 0)
 		{
 			if (age == 1)
 			{
@@ -122,7 +126,7 @@ public class Data {
 				u6[1] += impressions;
 			}
 			
-		}//end gender == 3
+		}//end gender == 0
 		
 	}//end addDate()
 
