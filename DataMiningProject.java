@@ -18,7 +18,7 @@ public class DataMiningProject {
 		Data data = new Data();
 		User cur;
 		String st;
-		int click,impression,userId = 0,x = 0 ;
+		int click,impression,userId = 0,x = 0, dne = 0 ;
 		ArrayList<User>  userInfo = new ArrayList<User>(23907634); //actual size is 23907634
 		String[] info,userProfile;
 		BufferedReader sampleReader = new BufferedReader(new FileReader(sampleFile));
@@ -56,18 +56,20 @@ public class DataMiningProject {
 				else if(userId == 0)
 				{
 					data.addData(click, impression);
+					
 				}
 				
 			}
 			catch(NullPointerException err)
 			{
 				System.out.println(userId + " Does not exist");
+				dne++;
 			}
 
 
 		}
 		//return User[]
-		
+		  data.addDne(dne);
 		  data.printToFile();
 		  sampleReader.close();
 		  userReader.close();
