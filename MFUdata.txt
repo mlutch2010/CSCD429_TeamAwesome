@@ -1,0 +1,24 @@
+Male, age(0-12): 226804 clicks 5408200 impressions 0.04194% clicked
+Male, age(13-18): 587156 clicks 13355357 impressions 0.04396% clicked
+Male, age(19-24): 924954 clicks 23461498 impressions 0.03942% clicked
+Male, age(22-30): 616775 clicks 16539526 impressions 0.03729% clicked
+Male, age(31-40): 480129 clicks 11270167 impressions 0.0426% clicked
+Male, age(41+): 242702 clicks 5100038 impressions 0.04759% clicked
+
+Female, age(0-12): 172318 clicks 4135696 impressions 0.04167% clicked
+Female, age(13-18): 343962 clicks 8306783 impressions 0.04141% clicked
+Female, age(19-24): 823041 clicks 19362136 impressions 0.04251% clicked
+Female, age(22-30): 580624 clicks 13543349 impressions 0.04287% clicked
+Female, age(31-40): 423142 clicks 8948442 impressions 0.04729% clicked
+Female, age(41+): 193439 clicks 3701733 impressions 0.05226% clicked
+
+Unknown, age(0-12): 60194 clicks 1444053 impressions 0.04168% clicked
+Unknown, age(13-18): 6022 clicks 134891 impressions 0.04464% clicked
+Unknown, age(19-24): 6446 clicks 152144 impressions 0.04237% clicked
+Unknown, age(22-30): 2864 clicks 69657 impressions 0.04112% clicked
+Unknown, age(31-40): 2094 clicks 50598 impressions 0.04139% clicked
+Unknown, age(41+): 1590 clicks 35953 impressions 0.04422% clicked
+
+No User info, 2475564 clicks 99314552 impressions 0.02493% clicked
+
+989532 lines not recorded because user doesn't exist
